@@ -5,7 +5,7 @@ output: html_document
 
 ### Introduction
 
-An introduction of the data and a description of the trends/books/items you are choosing to analyze (and why!)
+The data used in this report is collected by the Seattle Public Library and it records every item checked out in from the beginning of 2022 to the end of January in 2023. This report will analyze various information ranging from authors, to genre, to material type. The data visualization on authors is a line graph comparing the numbers of checkouts per month for the Taylor Jenkins Reid and Colleen Hoover. These authors were chosen as they had books which were gained huge popularity this past year despite being published in 2016/2017. For Taylor Jenkins Reid, that book was "The Seven Husbands of Evelyn Hugo" and for Colleen Hugo, that book was "It Ends with Us." The next data visualization displays the numbers of checkouts per month for three popular genres. This includes romance, thriller, and mystery. These genres were chosen because I have a personal interest in all three and thought they would be the most popular. The last data visualization will be a bar chart which displays the number of checkouts by material type for books in different forms, videos and audios. This includes physical books, audio books, e-books, video discs, and audio discs. 
 
 ### Summary Information
 
@@ -39,7 +39,7 @@ The first chart that you will create and include will show the trend over time o
 - Show more than one, but fewer than ~10 trends
   - For example, two books, or 5 different mediums
 - You must have clear x and y axis labels
-- The chart needs a clear title 
+- The chart needs a clear title
 - You need a legend for your different line colors and a clear - legend title
 In your .Rmd file, make sure to describe why you included the chart, and what patterns emerged
 
@@ -47,7 +47,9 @@ When we say "clear" or "human readable" titles and labels, that means that you s
 
 Here's an example of how to run an R script inside an RMarkdown file:
 
-``````{r, echo = FALSE, warning = FALSE, code = readLines("chart1_example.R")}
+```{r linechart1, fig.width=12}
+source('chart1_example.R')
+ch_tjr_graph
 ```
 
 ### Second Trends Over Time Chart
@@ -67,7 +69,9 @@ When we say "clear" or "human readable" titles and labels, that means that you s
 
 Here's an example of how to run an R script inside an RMarkdown file:
 
-``````{r, echo = FALSE, code = readLines("chart2_example.R")}
+```{r linechart2, fig.width=12}
+source('chart2_example.R')
+genre_graph
 ```
 
 ### Your Choice
@@ -75,12 +79,14 @@ Here's an example of how to run an R script inside an RMarkdown file:
 The last chart is up to you. It could be a line plot, scatter plot, histogram, bar plot, stacked bar plot, and more. Here are some requirements to help guide your design:
 
 - You must have clear x and y axis labels
-- The chart needs a clear title 
+- The chart needs a clear title
 - You need a legend for your different line colors and a clear legend title
 
 Here's an example of how to run an R script inside an RMarkdown file:
 
-``````{r, echo = FALSE, code = readLines("chart2_example.R")}
+```{r barchart, fig.width=12}
+source('chart3_example.R')
+bar_chart
 ```
 
 
