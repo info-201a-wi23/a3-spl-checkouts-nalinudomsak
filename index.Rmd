@@ -4,89 +4,35 @@ output: html_document
 ---
 
 ### Introduction
-
-The data used in this report is collected by the Seattle Public Library and it records every item checked out in from the beginning of 2022 to the end of January in 2023. This report will analyze various information ranging from authors, to genre, to material type. The data visualization on authors is a line graph comparing the numbers of checkouts per month for the Taylor Jenkins Reid and Colleen Hoover. These authors were chosen as they had books which were gained huge popularity this past year despite being published in 2016/2017. For Taylor Jenkins Reid, that book was "The Seven Husbands of Evelyn Hugo" and for Colleen Hugo, that book was "It Ends with Us." The next data visualization displays the numbers of checkouts per month for three popular genres. This includes romance, thriller, and mystery. These genres were chosen because I have a personal interest in all three and thought they would be the most popular. The last data visualization will be a bar chart which displays the number of checkouts by material type for books in different forms, videos and audios. This includes physical books, audio books, e-books, video discs, and audio discs. 
+The data used in this report is collected by the Seattle Public Library and it records every item checked out in from the beginning of 2022 to the end of January in 2023. This report will analyze various information ranging from authors, to genre, to material type. The data visualization on authors is a line graph comparing the numbers of checkouts per month for the Taylor Jenkins Reid and Colleen Hoover. These authors were chosen as they had books which were gained huge popularity this past year despite being published in 2016/2017. For Taylor Jenkins Reid, that book was "The Seven Husbands of Evelyn Hugo" and for Colleen Hugo, that book was "It Ends with Us." The next data visualization displays the numbers of checkouts per month for three popular genres. This includes romance, thriller, and mystery. These genres were chosen because I have a personal interest in all three and thought they would be the most popular. The last data visualization will be a bar chart which displays the number of checkouts by material type for books in different forms, videos and audios. This includes physical books, audio books, e-books, video discs, and audio discs. I thought it would be interesting to compare the most popular material type that were checked out and especially the comparision between different types of books. 
 
 ### Summary Information
-
-Write a summary paragraph of findings that includes the 5 values calculated from your summary information R script
-
-These will likely be calculated using your DPLYR skills, answering questions such as:
-
-- What is the average number of checkouts for each item?
-- What is the month or year with the most/least checkouts for a book that you're interested in?
-- What is the month or year with the most/least checkouts for ebooks?
-- How has the number of print book checkouts changed over time?
-
-Feel free to calculate and report values that you find relevant.
+For my information about authors, I found that the average checkouts per month for Colleen Hoover was **1517** and for Taylor Jenkins Reid it was **1651 checkouts per month**. By genre, I found the titles of a book from three popular genres which had the most checkouts in 2022. In romance and thriller, the title was **"Tomorrow, and Tomorrow, and Tomorrow" by Gabrielle Zevin**. In mystery, the title of the most popular book was **"Back to the Garden" by Laurie King**. Lastly, the book with the most checkouts at **485** was **"Spare by Prince Harry"**. The audiobook with the most checkouts at **851** and ebook with the most checkouts at **2951** was **"The House of Broken Angels" by Luis Alberto Urrea"**. 
 
 ### The Dataset
-
-- Who collected/published the data?  
-- What are the parameters of the data (dates, number of checkouts, kinds of books, etc.)?
-- How was the data collected or generated?  
-- Why was the data collected?  
-- What, if any, ethical questions do you need to consider when working with this data?  
-- What are possible limitations or problems with this data?   (at least 200 words)
-
+The dataset was collected and published by the Seattle Public Library. It includes every item checked out by the Seattle Public Library between January 1st 2022 and January 31st 2023. This includes all material types ranging from books to maps. There are over two million items that were checked out over this time period with ranging popularity for how often they were checked out. This data was collected under the Open Data Program with a purpose of increasing the quality of life for our residents; increasing transparency, accountability and comparability; promoting economic development and research; and improving internal performance management. A limitation from this data is the short time frame since it only covers a year, but trends likely change over a longer period so analysis from this data may not be reflective of trends across bigger time periods. 
 
 ### First Trends Over Time Chart
-
-Include a chart. Make sure to describe why you included the chart, and what patterns emerged
-
-The first chart that you will create and include will show the trend over time of your variable/topic/interest. Think carefully about what you want to communicate to your user (you may have to find relevant trends in the dataset first!). Here are some requirements to help guide your design:
-
-- Show more than one, but fewer than ~10 trends
-  - For example, two books, or 5 different mediums
-- You must have clear x and y axis labels
-- The chart needs a clear title
-- You need a legend for your different line colors and a clear - legend title
-In your .Rmd file, make sure to describe why you included the chart, and what patterns emerged
-
-When we say "clear" or "human readable" titles and labels, that means that you should not just display the variable name.
-
-Here's an example of how to run an R script inside an RMarkdown file:
 
 ```{r linechart1, fig.width=12}
 source('chart1_example.R')
 ch_tjr_graph
 ```
+The graph above shows total checkouts for two authors, Colleen Hoover and Taylor Jenkins Reid, in 2022. The graph shows that both authors gained popularity during this time period. Colleen Hoover reached the highest peak towards the end of the year whilst Taylor Jenkins Reid peaked in popularity in September 2022. 
 
 ### Second Trends Over Time Chart
-
-Include a chart. Make sure to describe why you included the chart, and what patterns emerged
-
-The second chart that you will create and include will show another trend over time of your variable/topic/interest. Think carefully about what you want to communicate to your user (you may have to find relevant trends in the dataset first!). Here are some requirements to help guide your design:
-
-- Show more than one, but fewer than ~10 trends
-  - For example, two books, or 5 different mediums
-- You must have clear x and y axis labels
-- The chart needs a clear title 
-- You need a legend for your different line colors and a clear - legend title
-In your .Rmd file, make sure to describe why you included the chart, and what patterns emerged
-
-When we say "clear" or "human readable" titles and labels, that means that you should not just display the variable name.
-
-Here's an example of how to run an R script inside an RMarkdown file:
 
 ```{r linechart2, fig.width=12}
 source('chart2_example.R')
 genre_graph
 ```
+The graph above shows total checkouts by popular genres in 2022. This includes mystery, romance, and thriller. The graph shows that thriller was consistently the most popular genre throughout the whole year whilst mystery was the least popular. However, it was breifly more popular than romance in March 2022. Additionally, the trend at the end of the graph indicates that Romance is gaining popularity and may soon become the most popular genre. Lastly, it should be noted that each genre followed a very similar pattern through out the time period. 
 
 ### Your Choice
-
-The last chart is up to you. It could be a line plot, scatter plot, histogram, bar plot, stacked bar plot, and more. Here are some requirements to help guide your design:
-
-- You must have clear x and y axis labels
-- The chart needs a clear title
-- You need a legend for your different line colors and a clear legend title
-
-Here's an example of how to run an R script inside an RMarkdown file:
 
 ```{r barchart, fig.width=12}
 source('chart3_example.R')
 bar_chart
 ```
 
-
+The bar chart above shows the number of checkouts by the most popular material types. This includes books, audio-books, e-books, sound discs, and video disc. The chart shows that books were the most popular with e-books following closely behind. Whilst sound discs were the least popular by far. 
